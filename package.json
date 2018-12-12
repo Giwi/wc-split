@@ -1,0 +1,38 @@
+{
+  "name": "@giwisoft/wc-split",
+  "version": "0.0.1",
+  "description": "Unopinionated utilities for resizeable split views",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Giwi/wc-split.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Giwi/wc-split/issues"
+  },
+  "author": "Giwi",
+  "license": "Apache-2.0",
+  "keywords": [
+    "web",
+    "web components"
+  ],
+  "module": "dist/esm/index.js",
+  "main": "dist/index.js",
+  "types": "dist/types/components.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "files": [
+    "dist/"
+  ],
+  "scripts": {
+    "build": "stencil build --docs",
+    "dev": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll"
+  },
+  "dependencies": {
+    "split.js": "^1.5.10"
+  },
+  "devDependencies": {
+    "@stencil/core": "~0.15.2",
+    "@stencil/sass": "^0.1.1"
+  }
+}

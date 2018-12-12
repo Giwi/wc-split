@@ -1,0 +1,44 @@
+:host {
+
+  .wrapper {
+    height: 100%;
+    width: 100%;
+    display: block;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+
+    &.horizontal {
+      div {
+        float: left;
+      }
+    }
+
+    .gutter {
+      background-color: var(--wc-split-gutter-color, #eee);
+      background-repeat: no-repeat;
+      background-position: 50%;
+
+      &.gutter-horizontal {
+        float: left;
+        height: 100%;
+      }
+
+      &.gutter-vertical {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB4AAAAFAQMAAABo7865AAAABlBMVEVHcEzMzMzyAv2sAAAAAXRSTlMAQObYZgAAABBJREFUeF5jOAMEEAIEEFwAn3kMwcB6I2AAAAAASUVORK5CYII=');
+
+        &:hover {
+          cursor: row-resize;
+        }
+      }
+
+      &.gutter-horizontal {
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUAAAAeCAYAAADkftS9AAAAIklEQVQoU2M4c+bMfxAGAgYYmwGrIIiDjrELjpo5aiZeMwF+yNnOs5KSvgAAAABJRU5ErkJggg==');
+
+        &:hover {
+          cursor: col-resize;
+        }
+      }
+    }
+  }
+}
