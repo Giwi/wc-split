@@ -4,7 +4,7 @@ import Split from 'split.js'
 @Component({
   tag: 'wc-split',
   styleUrl: 'wc-split.scss',
-  shadow: true
+  shadow: false
 })
 export class WcSplit {
 
