@@ -32,7 +32,7 @@
     "split.js": "^1.5.10"
   },
   "devDependencies": {
-    "@stencil/core": "~0.15.2",
+    "@stencil/core": "~0.16.2",
     "@stencil/sass": "^0.1.1"
   }
 }
