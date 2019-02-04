@@ -10,7 +10,7 @@
 | Property    | Attribute   | Description | Type                                          |
 | ----------- | ----------- | ----------- | --------------------------------------------- |
 | `direction` | `direction` |             | `string`                                      |
-| `items`     | `items`     |             | `string` or `{ name: string; size: number; }[]` |
+| `items`     | `items`     |             | `string \| { name: string; size: number; }[]` |
 
 
 ----------------------------------------------
