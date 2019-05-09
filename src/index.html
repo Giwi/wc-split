@@ -25,21 +25,29 @@
   <h1>Vertical split</h1>
   <div class="mui-panel">
     <div class="mui--bg-primary mui--text-light-secondary" style="height: 400px; width: 100%">
-      <wc-split items='[{"name": "a", "size": 30}, {"name": "b", "size": 70}]'>
-        <p slot="a">I'll be placed before the h1</p>
-        <p slot="b">I'll be placed after the h1</p>
+      <wc-split items='[{"name": "a", "size": 30}, {"name": "b", "size": 70}]' debug="true"      >
+        <p slot="a">I'll be placed top</p>
+        <p slot="b">I'll be placed bottom</p>
       </wc-split>
     </div>
+    <span id="size"></span>
   </div>
   <div class="mui-panel">
     <h1>Horizontal split</h1>
     <div class="mui--bg-accent mui--text-light-secondary" style="height: 400px; width: 100%;">
-      <wc-split items='[{"name": "a", "size": 30}, {"name": "b", "size": 70}]' direction="horizontal">
-        <p slot="a">I'll be placed before the h1</p>
-        <p slot="b">I'll be placed after the h1</p>
+      <wc-split items='[{"name": "a", "size": 30}, {"name": "b", "size": 70}]' direction="horizontal"  debug="true">
+        <p slot="a">I'll be placed left</p>
+        <p slot="b">I'll be placed right</p>
       </wc-split>
     </div>
   </div>
 </div>
+<script>
+document.addEventListener('DOMContentLoaded', function(){
+     document.addEventListener('resized', function (e) {
+         document.getElementById('size').innerHTML = JSON.stringify(e.detail);
+       });
+}, false);
+</script>
 </body>
 </html>

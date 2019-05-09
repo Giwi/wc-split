@@ -7,10 +7,10 @@
 
 ## Properties
 
-| Property    | Attribute   | Description | Type                                          |
-| ----------- | ----------- | ----------- | --------------------------------------------- |
-| `direction` | `direction` |             | `string`                                      |
-| `items`     | `items`     |             | `string \| { name: string; size: number; }[]` |
+| Property    | Attribute   | Description | Type                                          | Default      |
+| ----------- | ----------- | ----------- | --------------------------------------------- | ------------ |
+| `direction` | `direction` |             | `string`                                      | `'vertical'` |
+| `items`     | `items`     |             | `string \| { name: string; size: number; }[]` | `undefined`  |
 
 
 ----------------------------------------------

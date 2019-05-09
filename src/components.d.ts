@@ -13,12 +13,15 @@ import '@stencil/core';
 export namespace Components {
 
   interface WcSplit {
+    'debug': boolean;
     'direction': string;
     'items': { name: string, size: number }[] | string;
   }
   interface WcSplitAttributes extends StencilHTMLAttributes {
+    'debug'?: boolean;
     'direction'?: string;
     'items'?: { name: string, size: number }[] | string;
+    'onResized'?: (event: CustomEvent) => void;
   }
 }
 
