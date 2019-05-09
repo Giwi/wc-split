@@ -1,6 +1,6 @@
 {
   "name": "@giwisoft/wc-split",
-  "version": "0.0.2",
+  "version": "0.0.6",
   "description": "Unopinionated utilities for resizeable split views",
   "repository": {
     "type": "git",
