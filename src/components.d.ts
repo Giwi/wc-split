@@ -5,34 +5,18 @@
  */
 
 
-import '@stencil/core';
-
-
+import { HTMLStencilElement, JSXBase } from '@stencil/core/internal';
 
 
 export namespace Components {
-
   interface WcSplit {
     'debug': boolean;
     'direction': string;
     'items': { name: string, size: number }[] | string;
   }
-  interface WcSplitAttributes extends StencilHTMLAttributes {
-    'debug'?: boolean;
-    'direction'?: string;
-    'items'?: { name: string, size: number }[] | string;
-    'onResized'?: (event: CustomEvent) => void;
-  }
 }
 
 declare global {
-  interface StencilElementInterfaces {
-    'WcSplit': Components.WcSplit;
-  }
-
-  interface StencilIntrinsicElements {
-    'wc-split': Components.WcSplitAttributes;
-  }
 
 
   interface HTMLWcSplitElement extends Components.WcSplit, HTMLStencilElement {}
@@ -40,22 +24,33 @@ declare global {
     prototype: HTMLWcSplitElement;
     new (): HTMLWcSplitElement;
   };
-
   interface HTMLElementTagNameMap {
-    'wc-split': HTMLWcSplitElement
-  }
-
-  interface ElementTagNameMap {
     'wc-split': HTMLWcSplitElement;
   }
+}
+
+declare namespace LocalJSX {
+  interface WcSplit {
+    'debug'?: boolean;
+    'direction'?: string;
+    'items'?: { name: string, size: number }[] | string;
+    'onResized'?: (event: CustomEvent<any>) => void;
+  }
+
+  interface IntrinsicElements {
+    'wc-split': WcSplit;
+  }
+}
+
+export { LocalJSX as JSX };
 
 
+declare module "@stencil/core" {
   export namespace JSX {
-    export interface Element {}
-    export interface IntrinsicElements extends StencilIntrinsicElements {
-      [tagName: string]: any;
+    interface IntrinsicElements {
+      'wc-split': LocalJSX.WcSplit & JSXBase.HTMLAttributes<HTMLWcSplitElement>;
     }
   }
-  export interface HTMLAttributes extends StencilHTMLAttributes {}
-
 }
+
+

@@ -2,6 +2,7 @@
   "name": "@giwisoft/wc-split",
   "version": "0.0.7",
   "description": "Unopinionated utilities for resizeable split views",
+  "unpkg": "dist/wc-split/wc-split.js",
   "repository": {
     "type": "git",
     "url": "https://github.com/Giwi/wc-split.git"
@@ -15,24 +16,29 @@
     "web",
     "web components"
   ],
-  "module": "dist/esm/index.js",
   "main": "dist/index.js",
-  "types": "dist/types/components.d.ts",
+  "module": "dist/index.mjs",
+  "es2015": "dist/esm/index.mjs",
+  "es2017": "dist/esm/index.mjs",
+  "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
   "files": [
-    "dist/"
+    "dist/",
+    "loader/"
   ],
   "scripts": {
     "build": "stencil build --docs",
-    "dev": "stencil build --dev --watch --serve",
+    "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",
-    "test.watch": "stencil test --spec --e2e --watchAll"
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
   },
   "dependencies": {
-    "split.js": "^1.5.10"
+    "split.js": "^1.5.11"
   },
   "devDependencies": {
-    "@stencil/core": "~0.18.1",
-    "@stencil/sass": "^0.2.1"
+    "@stencil/core": "~1.7.1",
+    "@stencil/sass": "1.0.0"
   }
 }
