@@ -1,6 +1,6 @@
 {
   "name": "@giwisoft/wc-split",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Unopinionated utilities for resizeable split views",
   "unpkg": "dist/wc-split/wc-split.js",
   "repository": {
