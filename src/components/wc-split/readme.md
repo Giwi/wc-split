@@ -16,9 +16,9 @@
 
 ## Events
 
-| Event     | Description | Type                |
-| --------- | ----------- | ------------------- |
-| `resized` |             | `CustomEvent<void>` |
+| Event     | Description | Type               |
+| --------- | ----------- | ------------------ |
+| `resized` |             | `CustomEvent<any>` |
 
 
 ----------------------------------------------
