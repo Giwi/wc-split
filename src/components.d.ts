@@ -30,7 +30,7 @@ declare global {
 }
 
 declare namespace LocalJSX {
-  interface WcSplit {
+  interface WcSplit extends JSXBase.HTMLAttributes<HTMLWcSplitElement> {
     'debug'?: boolean;
     'direction'?: string;
     'items'?: { name: string, size: number }[] | string;
@@ -47,9 +47,7 @@ export { LocalJSX as JSX };
 
 declare module "@stencil/core" {
   export namespace JSX {
-    interface IntrinsicElements {
-      'wc-split': LocalJSX.WcSplit & JSXBase.HTMLAttributes<HTMLWcSplitElement>;
-    }
+    interface IntrinsicElements extends LocalJSX.IntrinsicElements {}
   }
 }
 
