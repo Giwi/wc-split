@@ -64,7 +64,7 @@ export class WcSplit {
 
   render() {
     return <div class={'wrapper ' + this.direction}>
-      {this._items.map((item) =>
+      {(this._items || []).map((item) =>
         <div ref={(el) => this.slots.push(el as HTMLDivElement)}>
           <slot name={item.name}/>
         </div>
