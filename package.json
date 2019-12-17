@@ -28,7 +28,7 @@
     "loader/"
   ],
   "scripts": {
-    "prepublishOnly": "npm run build --prod",
+    "prepublishOnly": "npm run build --prod --scripts-prepend-node-path",
     "build": "stencil build --docs",
     "start": "stencil build --dev --watch --serve",
     "test": "stencil test --spec --e2e",

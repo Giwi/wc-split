@@ -40,10 +40,6 @@ export class WcSplit {
     }
   }
 
-  /**
-   *
-   * @param {number[]} newPercent
-   */
   onDragEnd(newPercent: number[]) {
     const event = {};
     this.slots.forEach((s, i) => {
