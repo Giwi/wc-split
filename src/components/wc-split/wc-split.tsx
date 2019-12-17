@@ -23,7 +23,6 @@ export class WcSplit {
     } else {
       this._items = this.items;
     }
-    console.log(this._items)
   }
 
   componentDidLoad() {
