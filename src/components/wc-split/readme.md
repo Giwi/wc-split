@@ -10,7 +10,7 @@
 | Property    | Attribute   | Description | Type                                          | Default      |
 | ----------- | ----------- | ----------- | --------------------------------------------- | ------------ |
 | `debug`     | `debug`     |             | `boolean`                                     | `false`      |
-| `direction` | `direction` |             | `string`                                      | `'vertical'` |
+| `direction` | `direction` |             | `"horizontal" \| "vertical"`                  | `'vertical'` |
 | `items`     | `items`     |             | `string \| { name: string; size: number; }[]` | `undefined`  |
 
 
