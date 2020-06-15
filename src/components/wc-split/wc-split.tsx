@@ -9,7 +9,7 @@ import Split from 'split.js'
 export class WcSplit {
 
   @Prop() items: { name: string, size: number }[] | string;
-  @Prop() direction: string = 'vertical';
+  @Prop() direction: 'vertical' | 'horizontal' = 'vertical';
   @Prop() debug: boolean = false;
 
   @Event() resized: EventEmitter;
@@ -33,7 +33,6 @@ export class WcSplit {
       });
       Split(this.slots, {
         sizes: sizes,
-        //  expandToMin: false,
         direction: this.direction,
         onDragEnd: this.onDragEnd.bind(this),
       });
