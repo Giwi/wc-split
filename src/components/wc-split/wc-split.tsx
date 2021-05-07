@@ -11,6 +11,7 @@ export class WcSplit {
   @Prop() items: { name: string, size: number }[] | string;
   @Prop() direction: 'vertical' | 'horizontal' = 'vertical';
   @Prop() debug: boolean = false;
+  @Prop() minHeight: number = 100;
 
   @Event() resized: EventEmitter;
 
@@ -34,6 +35,7 @@ export class WcSplit {
       Split(this.slots, {
         sizes: sizes,
         direction: this.direction,
+        minSize: this.minHeight || 100,
         onDragEnd: this.onDragEnd.bind(this),
       });
     }

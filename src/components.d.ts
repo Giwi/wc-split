@@ -10,6 +10,7 @@ export namespace Components {
         "debug": boolean;
         "direction": 'vertical' | 'horizontal';
         "items": { name: string, size: number }[] | string;
+        "minHeight": number;
     }
 }
 declare global {
@@ -28,6 +29,7 @@ declare namespace LocalJSX {
         "debug"?: boolean;
         "direction"?: 'vertical' | 'horizontal';
         "items"?: { name: string, size: number }[] | string;
+        "minHeight"?: number;
         "onResized"?: (event: CustomEvent<any>) => void;
     }
     interface IntrinsicElements {
