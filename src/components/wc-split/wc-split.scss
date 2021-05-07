@@ -7,9 +7,12 @@
     -webkit-box-sizing: border-box;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    &>div {
+    position: relative;
+
+    & > div {
       height: 100%;
     }
+
     &.horizontal {
       div {
         float: left;
